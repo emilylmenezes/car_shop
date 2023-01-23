@@ -19,13 +19,13 @@ class CarService {
 
   public async carsAll() {
     const odm = new CarODM();
-    const list = await odm.carsAll();
+    const list = await odm.vehicleAll();
     return list.map((acc) => this.createCarDomain(acc));
   }
 
   public async carOfID(id: string) {
     const odm = new CarODM();
-    const list = await odm.carsID(id);
+    const list = await odm.vehicleID(id);
     return this.createCarDomain(list);
   }
 
